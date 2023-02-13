@@ -16,8 +16,8 @@ public class Rectangle {
     }
 
     public Rectangle(int length, int width) {
-        this.length = length;
-        this.width = width;
+        setLength(length);
+        setWidth(width);
     }
 
     public int getLength() {
@@ -25,7 +25,10 @@ public class Rectangle {
     }
 
     public void setLength(int length) {
-        this.length = length;
+        if (length > 0)
+            this.length = length;
+        else
+            this.length = 0;
     }
 
     public int getWidth() {
